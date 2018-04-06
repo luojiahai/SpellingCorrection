@@ -31,7 +31,7 @@ void Analyser::analyse(const vector<string>& correct) {
     for (int i = 0; i < totalWords; ++i) {
         auto predict = Analyser::data[i];
         auto correct_word = correct[i];
-        cout << "---------------------" << endl;
+        cout << "----------------------------------" << endl;
         cout << "misspelled_word: " + predict.misspelled_word << endl;
         cout << "correct_word: " + correct_word << endl;
         cout << "predicted_words: " << endl;
@@ -39,13 +39,13 @@ void Analyser::analyse(const vector<string>& correct) {
             cout << "    -> " + str << endl;
         }
     }
-    cout << "---------------------" << endl;
+    cout << "----------------------------------" << endl;
     cout << "totalWords: " + to_string(totalWords) << endl;
     cout << "totalPredicts: " + to_string(totalPredicts) << endl;
     cout << "totalCorrects: " + to_string(totalCorrects) << endl;
-    cout << "---------------------" << endl;
+    cout << "----------------------------------" << endl;
     cout << "precision: " + to_string(1.0*totalCorrects/totalPredicts) << endl;
     cout << "recall: " + to_string(1.0*totalCorrects/totalWords) << endl;
-    cout << "---------------------" << endl;
+    cout << "----------------------------------" << endl;
     cout << "done!" << endl;
 }

@@ -24,11 +24,11 @@ void Levenshtein::run(const vector<string>& misspell, const vector<string>& dict
             }
         }
         analyser->add(str1, min_words);
-		cout << "searching: " + str1 << endl;
+		cout << "levenshtein searching: " + str1 << endl;
     }
 }
 
-unsigned int Levenshtein::edit_distance(const string& s1, const string& s2) {
+unsigned int Levenshtein::levenshtein_distance_old(const string& s1, const string& s2) {
 	const size_t len1 = s1.size(), len2 = s2.size();
 	vector<vector<unsigned int>> d(len1 + 1, vector<unsigned int>(len2 + 1));
 
