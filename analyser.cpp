@@ -47,5 +47,4 @@ void Analyser::analyse(const vector<string>& correct) {
     cout << "precision: " + to_string(1.0*totalCorrects/totalPredicts) << endl;
     cout << "recall: " + to_string(1.0*totalCorrects/totalWords) << endl;
     cout << "----------------------------------" << endl;
-    cout << "done!" << endl;
 }

@@ -52,6 +52,8 @@ int main(int argc, char const *argv[]) {
     }
     analyser.analyse(correct);
 
+    cout << "done!" << endl;
+
     return EXIT_SUCCESS;
 }
 
