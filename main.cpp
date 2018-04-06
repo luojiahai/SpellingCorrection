@@ -16,7 +16,7 @@ void get(vector<string>*, const string&);
 
 int main(int argc, char const *argv[]) {
     if (argc < 5) {
-        cout << "Missing arguments" << endl;
+        cout << "MissingArgumentsException: Missing arguments" << endl;
         cout << "Usage: {DICTIONARY_PATH} {MISSPELL_PATH} {CORRECT_PATH} {levenshtein | ngram}" << endl;
         return EXIT_FAILURE;
     }
@@ -24,7 +24,7 @@ int main(int argc, char const *argv[]) {
     string method = argv[4];
     transform(method.begin(), method.end(), method.begin(), ::tolower);
     if (method.compare("levenshtein") & method.compare("ngram")) {
-        cout << "Method not exist" << endl;
+        cout << "MethodNotExistException: Method not exist" << endl;
         cout << "Usage: {DICTIONARY_PATH} {MISSPELL_PATH} {CORRECT_PATH} {levenshtein | ngram}" << endl;
         return EXIT_FAILURE;
     }
