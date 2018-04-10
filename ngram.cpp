@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 #include "ngram.h"
 #include "analyser.h"
@@ -38,22 +39,7 @@ int Ngram::ngram_distance(const int& n, const string& s1, const string& s2) {
                      s2_ngrams.begin(),
                      s2_ngrams.end(),
                      back_inserter(intersection));
-    // cout << s1 + " " + s2 << endl;
-    // cout << "-------ss1----------" << endl;
-    // for (const auto& ss1: s1_ngrams) {
-    //     cout << ss1 << endl;
-    // }
-    // cout << "-------ss2----------" << endl;
-    // for (const auto& ss2: s2_ngrams) {
-    //     cout << ss2 << endl;
-    // }
-    // cout << "-------inter--------" << endl;
-    // for (const auto& inter: intersection) {
-    //     cout << inter << endl;
-    // }
     int score = s1_ngrams.size() + s2_ngrams.size() - 2 * intersection.size();
-    // cout << score << endl;
-    // cout << "--------------------" << endl;
     return score;
 }
 
